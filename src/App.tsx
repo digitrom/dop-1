@@ -32,14 +32,14 @@ export const moneyFilter = (money: MoneyType[], filterValue: BanknotsType): Mone
 
     return filterValue !== "All" ? money.filter(m => m.banknotes === filterValue) : money
 
-  /*  switch (filterValue) {
-        case 'Dollars':
-            return money.filter(m => m.banknotes === 'Dollars')
-        case 'RUBLS':
-            return money.filter(m => m.banknotes === 'RUBLS')
-        default:
-            return money
-    }*/
+    /*  switch (filterValue) {
+          case 'Dollars':
+              return money.filter(m => m.banknotes === 'Dollars')
+          case 'RUBLS':
+              return money.filter(m => m.banknotes === 'RUBLS')
+          default:
+              return money
+      }*/
 }
 
 
