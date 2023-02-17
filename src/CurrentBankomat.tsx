@@ -6,7 +6,6 @@ type CurrentBankomatPropsType = {
     money: MoneyType
 }
 export const CurrentBankomat = (props: CurrentBankomatPropsType) => {
-
     return (
        /* props.money.banknotes === "Dollars"
             ? <BanknotGreen>
@@ -22,20 +21,14 @@ export const CurrentBankomat = (props: CurrentBankomatPropsType) => {
         <Name>{props.money.banknotes}</Name>
         <Nominal>{props.money.value}</Nominal>
     </BanknotUniversal>
-
-
     );
 };
 
 const BanknotUniversal = styled.div`
   background-color: ${props => {
-  if(props.color === 'greenyellow' ){
-      return 'greenyellow'
-  } else {
-    return 'steelblue'
-    }
+ return props.color === 'greenyellow' ? 'greenyellow' : 'steelblue'
 }} ;
-  width: 400px;
+  width: 300px;
   height: 200px;
   margin: 10px;
 `
@@ -56,7 +49,6 @@ const Name = styled.div`
   justify-content: center;
   font-size: 30px;
 `
-
 const Nominal = styled.div`
   display: flex;
   justify-content: center;

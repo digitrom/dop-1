@@ -11,12 +11,14 @@ type CityPropsType = {
 export const City = (props: CityPropsType) => {
 
     // пока это пропускам
-    const mappedMoney = props.data.map((el: MoneyType, index) => (
-        <CurrentBankomat
-            key={index}
-            money={el}
-        />
-    ))
+    const mappedMoney = props.data.map((el: MoneyType, index) => {
+        return (
+            <CurrentBankomat
+                key={index}
+                money={el}
+            />
+        )
+    })
 
     // const mappedMoney = props.data.map(el => {
     //     return (
@@ -38,7 +40,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-size: 30px;
 `
 
 
